@@ -1,43 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>RSL Software</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>RSL Software - Desarrollo Web Personalizado</title>
+  <meta name="description" content="Desarrollo de software web personalizado, diseño de páginas web, aplicaciones web y correos empresariales en México.">
+  <meta name="keywords" content="desarrollo web, diseño web, aplicaciones web, software personalizado, México">
+  
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="build/img/general/icon.jpg">
   <link href="build/img/general/icon.jpg" rel="apple-touch-icon">
+  
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <!-- Personalized CSS File -->
   <link rel="stylesheet" href="build/css/app.css">
+  
+  <style>
+    /* Form improvements */
+    .contact-form .form-control:focus {
+      border-color: var(--accent-color, #007bff);
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    
+    .contact-form .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    
+    .alert {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      animation: slideIn 0.3s ease-out;
+    }
+    
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .alert-success {
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+    }
+    
+    .alert-danger {
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+      color: #721c24;
+    }
+    
+    .spinner {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* Honeypot field - hidden from users but visible to bots */
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+    }
+  </style>
 </head>
 
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div
-      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename"><img src="build/img/general/logo.webp" alt="logo"></h1>
+        <h1 class="sitename"><img src="build/img/general/logo.webp" alt="RSL Software Logo"></h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -46,15 +110,10 @@
           <li><a href="#about">Nosotros</a></li>
           <li><a href="#benefits">Beneficios</a></li>
           <li><a href="#services">Servicios</a></li>
-          <!-- <li><a href="#projects">Proyectos</a></li> -->
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>
-        <!-- <i class="mobile-nav-toggle d-xl-none bi bi-list"></i> -->
       </nav>
-
-      <!-- <a class="btn-getstarted" id="languageBtn" href="index.html#about">Inglés</a> -->
-
     </div>
   </header>
 
@@ -62,17 +121,10 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-              <!-- <div class="company-badge mb-4">
-                <i class="bi bi-gear-fill me-2"></i>
-                Working for your success
-              </div> -->
-
               <h1 class="mb-4">
                 Software diseñado <br>
                 específicamente para <br>
@@ -82,47 +134,22 @@
               <p class="mb-4 mb-md-5">
                 Diseño, desarrollo y experiencia de usuario que impulsan tu presencia digital
               </p>
-
-              <!-- <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
-                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-link mt-2 mt-sm-0 glightbox">
-                  <i class="bi bi-play-circle me-1"></i>
-                  Play Video
-                </a>
-              </div> -->
             </div>
           </div>
 
           <div class="col-lg-6">
             <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
-              <img src="assets/img/illustration-1.webp" alt="Hero Image" class="img-fluid">
-
-              <!-- <div class="customers-badge">
-                <div class="customer-avatars">
-                  <img src="assets/img/avatar-1.webp" alt="Customer 1" class="avatar">
-                  <img src="assets/img/avatar-2.webp" alt="Customer 2" class="avatar">
-                  <img src="assets/img/avatar-3.webp" alt="Customer 3" class="avatar">
-                  <img src="assets/img/avatar-4.webp" alt="Customer 4" class="avatar">
-                  <img src="assets/img/avatar-5.webp" alt="Customer 5" class="avatar">
-                  <span class="avatar more">12+</span>
-                </div>
-                <p class="mb-0 mt-2">12,000+ lorem ipsum dolor sit amet consectetur adipiscing elit</p>
-              </div> -->
+              <img src="assets/img/illustration-1.webp" alt="Ilustración de desarrollo web" class="img-fluid">
             </div>
           </div>
         </div>
-
       </div>
-
-    </section><!-- /Hero Section -->
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4 align-items-center justify-content-between">
-
           <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
             <span class="about-meta">Más acerca de nosotros</span>
             <h2 class="about-title">Software completamente personalizado</h2>
@@ -137,7 +164,7 @@
               <div class="row gy-4">
                 <div class="col-lg-5">
                   <div class="profile d-flex align-items-center gap-3">
-                    <img src="build/img/general/photo.webp" alt="CEO Profile" class="profile-image">
+                    <img src="build/img/general/photo.webp" alt="Rafael San Lázaro - Fundador" class="profile-image">
                     <div>
                       <h4 class="profile-name">Rafael San Lázaro</h4>
                       <p class="profile-position">Fundador</p>
@@ -149,8 +176,8 @@
                     <i class="bi bi-telephone-fill"></i>
                     <div>
                       <p class="contact-label">Contáctanos</p>
-                      <a href="https://wa.me/+525543390988?text=Hola%2C%20me%20gustaría%20pedir%20informes."
-                        class="contact-number">+52 55 4339 0988</a>
+                      <a href="https://wa.me/525543390988?text=Hola%2C%20me%20gustaría%20pedir%20informes."
+                        class="contact-number" target="_blank" rel="noopener">+52 55 4339 0988</a>
                     </div>
                   </div>
                 </div>
@@ -161,8 +188,8 @@
           <div class="col-xl-6 about-img" data-aos="fade-up" data-aos-delay="300">
             <div class="image-wrapper">
               <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
-                <img src="assets/img/about-5.webp" alt="Business Meeting" class="img-fluid main-image rounded-4">
-                <img src="assets/img/about-2.webp" alt="Team Discussion" class="img-fluid small-image rounded-4">
+                <img src="assets/img/about-5.webp" alt="Reunión de negocios" class="img-fluid main-image rounded-4">
+                <img src="assets/img/about-2.webp" alt="Discusión de equipo" class="img-fluid small-image rounded-4">
               </div>
               <div class="experience-badge floating">
                 <h3>4+ <span>años</span></h3>
@@ -171,52 +198,40 @@
             </div>
           </div>
         </div>
-
       </div>
-
-    </section><!-- /About Section -->
+    </section>
 
     <!-- Features Section -->
     <section id="benefits" class="features section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Beneficios</h2>
         <p>Las páginas web y aplicaciones web mejoran tu alcance y eficiencia, mientras que los correos empresariales
           refuerzan tu imagen profesional y facilitan la comunicación. Juntos, impulsan tu presencia digital y
           competitividad.</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container">
-
         <div class="d-flex justify-content-center">
-
           <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
-
             <li class="nav-item">
               <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
                 <h4>Páginas web</h4>
               </a>
-            </li><!-- End tab nav item -->
-
+            </li>
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
                 <h4>Aplicaciones web</h4>
-              </a><!-- End tab nav item -->
-
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
                 <h4>Correos empresariales</h4>
               </a>
-            </li><!-- End tab nav item -->
-
+            </li>
           </ul>
-
         </div>
 
         <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
-
           <div class="tab-pane fade active show" id="features-tab-1">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
@@ -241,10 +256,10 @@
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-illustration-1.webp" alt="" class="img-fluid">
+                <img src="assets/img/features-illustration-1.webp" alt="Ilustración de sitios web" class="img-fluid">
               </div>
             </div>
-          </div><!-- End tab content item -->
+          </div>
 
           <div class="tab-pane fade" id="features-tab-2">
             <div class="row">
@@ -272,10 +287,10 @@
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-illustration-2.webp" alt="" class="img-fluid">
+                <img src="assets/img/features-illustration-2.webp" alt="Ilustración de aplicaciones web" class="img-fluid">
               </div>
             </div>
-          </div><!-- End tab content item -->
+          </div>
 
           <div class="tab-pane fade" id="features-tab-3">
             <div class="row">
@@ -298,40 +313,32 @@
                       (ventas@empresa.com, soporte@empresa.com, etc.) para gestionar diferentes aspectos de tu
                       negocio.</span></li>
                 </ul>
-
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-illustration-3.webp" alt="" class="img-fluid">
+                <img src="assets/img/features-illustration-3.webp" alt="Ilustración de correos empresariales" class="img-fluid">
               </div>
             </div>
-          </div><!-- End tab content item -->
-
+          </div>
         </div>
-
       </div>
 
       <!-- Features 2 Section -->
       <section id="features-2" class="features-2 section">
-
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-
           <div class="row align-items-center">
-
             <div class="col-lg-4">
-
               <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="200">
                 <div class="d-flex align-items-center justify-content-end gap-4">
                   <div class="feature-content">
                     <h3>Disponible en cualquier dispositivo</h3>
                     <p>Nuestros proyectos están diseñados para ser completamente accesible desde cualquier dispositivo,
-                      ya sea
-                      un ordenador, tablet o teléfono móvil.</p>
+                      ya sea un ordenador, tablet o teléfono móvil.</p>
                   </div>
                   <div class="feature-icon flex-shrink-0">
                     <i class="bi bi-display"></i>
                   </div>
                 </div>
-              </div><!-- End .feature-item -->
+              </div>
 
               <div class="feature-item text-end mb-5" data-aos="fade-right" data-aos-delay="300">
                 <div class="d-flex align-items-center justify-content-end gap-4">
@@ -344,7 +351,7 @@
                     <i class="bi bi-person-fill-gear"></i>
                   </div>
                 </div>
-              </div><!-- End .feature-item -->
+              </div>
 
               <div class="feature-item text-end" data-aos="fade-right" data-aos-delay="400">
                 <div class="d-flex align-items-center justify-content-end gap-4">
@@ -356,18 +363,16 @@
                     <i class="bi bi-check2-circle"></i>
                   </div>
                 </div>
-              </div><!-- End .feature-item -->
-
+              </div>
             </div>
 
             <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
               <div class="phone-mockup text-center">
-                <img src="build/img/body/phone.webp" alt="Phone Mockup" class="img-fluid">
+                <img src="build/img/body/phone.webp" alt="Mockup de teléfono" class="img-fluid">
               </div>
-            </div><!-- End Phone Mockup -->
+            </div>
 
             <div class="col-lg-4">
-
               <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="200">
                 <div class="d-flex align-items-center gap-4">
                   <div class="feature-icon flex-shrink-0">
@@ -378,7 +383,7 @@
                     <p>El código está completamente a disposición del cliente para su revisión y personalización.</p>
                   </div>
                 </div>
-              </div><!-- End .feature-item -->
+              </div>
 
               <div class="feature-item mb-5" data-aos="fade-left" data-aos-delay="300">
                 <div class="d-flex align-items-center gap-4">
@@ -391,7 +396,7 @@
                       de pantalla.</p>
                   </div>
                 </div>
-              </div><!-- End .feature-item -->
+              </div>
 
               <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
                 <div class="d-flex align-items-center gap-4">
@@ -404,31 +409,23 @@
                       Firefox, Safari, Edge y otros.</p>
                   </div>
                 </div>
-              </div><!-- End .feature-item -->
-
+              </div>
             </div>
           </div>
-
         </div>
-
-      </section><!-- /Features 2 Section -->
-
-    </section><!-- /Features Section -->
+      </section>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="services section light-background">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Servicios</h2>
         <p>Ofrecemos servicios integrales de desarrollo de software web, incluyendo diseño personalizado, desarrollo de
           aplicaciones, optimización para dispositivos móviles, integración de sistemas y soporte técnico continuo.</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row g-4">
-
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-card d-flex">
               <div class="icon flex-shrink-0">
@@ -438,10 +435,9 @@
                 <h3>Diseño web</h3>
                 <p>Creamos sitios web atractivos, funcionales y personalizados, diseñados para ofrecer la mejor
                   experiencia de usuario en cualquier dispositivo.</p>
-                <!-- <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a> -->
               </div>
             </div>
-          </div><!-- End Service Card -->
+          </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card d-flex">
@@ -452,10 +448,9 @@
                 <h3>Desarrollo web</h3>
                 <p>Desarrollamos soluciones web eficientes y adaptables, combinando funcionalidad, rendimiento y
                   tecnología avanzada para impulsar tu negocio.</p>
-                <!-- <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a> -->
               </div>
             </div>
-          </div><!-- End Service Card -->
+          </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-card d-flex">
@@ -466,10 +461,9 @@
                 <h3>Asesoramiento técnico</h3>
                 <p>Brindamos asesoramiento técnico especializado para optimizar tus proyectos y resolver cualquier
                   desafío tecnológico.</p>
-                <!-- <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a> -->
               </div>
             </div>
-          </div><!-- End Service Card -->
+          </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-card d-flex">
@@ -480,23 +474,17 @@
                 <h3>Mantenimiento y seguimiento</h3>
                 <p>Ofrecemos mantenimiento continuo y seguimiento personalizado para garantizar el óptimo rendimiento de
                   tus soluciones digitales.</p>
-                <!-- <a href="service-details.html" class="read-more">Read More <i class="bi bi-arrow-right"></i></a> -->
               </div>
             </div>
-          </div><!-- End Service Card -->
-
+          </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Services Section -->
-
-    <!-- Faq Section -->
+    <!-- FAQ Section -->
     <section class="faq-9 faq section light-background" id="faq">
-
       <div class="container">
         <div class="row">
-
           <div class="col-lg-5" data-aos="fade-up">
             <h2 class="faq-title">¿Tienes alguna duda?</h2>
             <p class="faq-description">Revisa las preguntas comunes (FAQ) o contáctanos.</p>
@@ -512,7 +500,6 @@
 
           <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
             <div class="faq-container">
-
               <div class="faq-item faq-active">
                 <h3>¿Cuál es la diferencia entre un sitio web y una aplicación web?</h3>
                 <div class="faq-content">
@@ -521,7 +508,7 @@
                     los usuarios realizar tareas complejas (Ejemplos: Google Docs o Facebook).</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+              </div>
 
               <div class="faq-item">
                 <h3>¿Cuánto tiempo tarda en desarrollarse un proyecto?</h3>
@@ -530,7 +517,7 @@
                     tiempo de 1 a 2 semanas.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+              </div>
 
               <div class="faq-item">
                 <h3>¿Proporcionan soporte y mantenimiento después de realizar la entrega del proyecto?</h3>
@@ -540,7 +527,7 @@
                     ya se incluye en la cotización inicial.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+              </div>
 
               <div class="faq-item">
                 <h3>¿Puedo obtener un sitio web multilingüe?</h3>
@@ -549,25 +536,20 @@
                     adicional se contempla dentro de la cotización inicial y planeación del proyecto.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
+              </div>
             </div>
           </div>
-
         </div>
       </div>
-    </section><!-- /Faq Section -->
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contacto</h2>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row g-4 g-lg-5">
           <div class="col-lg-5">
             <div class="info-box" data-aos="fade-up" data-aos-delay="200">
@@ -592,7 +574,7 @@
                 </div>
                 <div class="content">
                   <h4>Número telefónico</h4>
-                  <p>+52 55 4339 0988</p>
+                  <p><a href="tel:+525543390988">+52 55 4339 0988</a></p>
                 </div>
               </div>
 
@@ -602,7 +584,7 @@
                 </div>
                 <div class="content">
                   <h4>Correo electrónico</h4>
-                  <p>info@rslsoftware.com</p>
+                  <p><a href="mailto:info@rslsoftware.com">info@rslsoftware.com</a></p>
                 </div>
               </div>
             </div>
@@ -614,54 +596,59 @@
               <p>¿Tienes una idea o proyecto en mente? ¡Nos encantaría escucharte! En RSL Software, estamos listos para
                 ayudarte a convertir tus ideas en soluciones digitales personalizadas.</p>
 
-              <form action="https://formsubmit.co/info@rslsoftware.com" method="POST" data-aos="fade-up"
-                data-aos-delay="200">
+              <form id="contactForm" data-aos="fade-up" data-aos-delay="200">
+                <!-- Replace YOUR_ACCESS_KEY with your actual Web3Forms access key -->
+                <input type="hidden" name="access_key" value="9cb2097f-fa12-4e7e-baa8-967caa0e1570">
+                
+                <!-- Honeypot field to catch bots -->
+                <input type="text" name="_honeypot" class="hp-field" tabindex="-1" autocomplete="off">
+                
+                <!-- Redirect after submission (optional) -->
+                <input type="hidden" name="redirect" value="https://rslsoftware.com/gracias.html">
+                
                 <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Nombre" required minlength="2">
+                  </div>
 
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Nombre" required="">
-                  </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Correo electrónico" required="">
+                    <input type="email" class="form-control" name="email" placeholder="Correo electrónico" required>
                   </div>
 
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Asunto" required="">
+                    <input type="text" class="form-control" name="subject" placeholder="Asunto" required minlength="3">
                   </div>
 
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required=""></textarea>
+                    <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required minlength="10"></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <div id="formMessage"></div>
                   </div>
 
                   <div class="col-12 text-center">
-                    <!-- <div class="loading">Cargando</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Tu mensaje ha sido enviado. ¡Gracias!</div> -->
-                    <button type="submit" class="btn">Enviar mensaje</button>
+                    <button type="submit" class="btn" id="submitBtn">
+                      <span id="btnText">Enviar mensaje</span>
+                      <span id="btnSpinner" class="spinner" style="display: none;"></span>
+                    </button>
                   </div>
-
                 </div>
               </form>
-
             </div>
           </div>
-
         </div>
-
       </div>
-
-    </section><!-- /Contact Section -->
+    </section>
 
   </main>
 
   <footer id="footer" class="footer">
-
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename"><img src="build/img/general/logo.webp" alt="icon"></span>
+            <span class="sitename"><img src="build/img/general/logo.webp" alt="RSL Software Logo"></span>
           </a>
           <div class="footer-contact pt-3">
             <p>Colima 141</p>
@@ -670,12 +657,6 @@
             <p class="mt-3"><strong>Teléfono:</strong> <span>+52 55 4339 0988</span></p>
             <p><strong>Email:</strong> <span>info@rslsoftware.com</span></p>
           </div>
-          <!-- <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div> -->
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
@@ -683,57 +664,46 @@
           <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="#about">Nosotros</a></li>
-            <!-- <li><a href="#">Proyectos</a></li> -->
-            <!-- <li><a href="#">Términos del servicio</a></li>
-            <li><a href="#">Política de privacidad</a></li> -->
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Nuestros servicios</h4>
           <ul>
-            <li><a>Diseño web</a></li>
-            <li><a>Desarrollo web</a></li>
-            <li><a>Correos empresariales</a></li>
-            <li><a>Asesoría técnica</a></li>
-            <li><a>Mantenimiento web</a></li>
+            <li><a href="#services">Diseño web</a></li>
+            <li><a href="#services">Desarrollo web</a></li>
+            <li><a href="#services">Correos empresariales</a></li>
+            <li><a href="#services">Asesoría técnica</a></li>
+            <li><a href="#services">Mantenimiento web</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Otros enlaces</h4>
           <ul>
-            <li><a href="https://www.google.com/maps/place/Desarrollo+web+personalizado+RSL/data=!4m2!3m1!1s0x0:0x1841216d19d6cd63?sa=X&ved=1t:2428&hl=es-419&ictx=111">Perfil de Google Maps</a></li>
-            <!-- <li><a href="">Google Business</a></li> -->
+            <li><a href="https://www.google.com/maps/place/Desarrollo+web+personalizado+RSL/data=!4m2!3m1!1s0x0:0x1841216d19d6cd63?sa=X&ved=1t:2428&hl=es-419&ictx=111" target="_blank" rel="noopener">Perfil de Google Maps</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Nuestro Blog</h4>
           <ul>
-            <li><a>En construcción</a></li>
+            <li><span>En construcción</span></li>
           </ul>
         </div>
-
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">RSL Software</strong> <span>Todos los derechos
           reservados</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-      </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -742,11 +712,52 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="build/js/bundle.min.js"></script>
 
+  <!-- Contact Form Script -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const formData = new FormData(form);
+      const submitBtn = document.getElementById('submitBtn');
+      const btnText = document.getElementById('btnText');
+      const btnSpinner = document.getElementById('btnSpinner');
+      const formMessage = document.getElementById('formMessage');
+      
+      // Disable button and show loading
+      submitBtn.disabled = true;
+      btnText.textContent = 'Enviando...';
+      btnSpinner.style.display = 'inline-block';
+      formMessage.innerHTML = '';
+      
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          formMessage.innerHTML = '<div class="alert alert-success">¡Mensaje enviado exitosamente! Te contactaremos pronto.</div>';
+          form.reset();
+        } else {
+          throw new Error(data.message || 'Error al enviar el mensaje');
+        }
+      } catch (error) {
+        formMessage.innerHTML = '<div class="alert alert-danger">Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o contáctanos directamente.</div>';
+        console.error('Error:', error);
+      } finally {
+        // Re-enable button and hide loading
+        submitBtn.disabled = false;
+        btnText.textContent = 'Enviar mensaje';
+        btnSpinner.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 
 </html>
