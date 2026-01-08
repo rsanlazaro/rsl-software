@@ -604,7 +604,7 @@
               <p>¿Tienes una idea o proyecto en mente? ¡Nos encantaría escucharte! En RSL Software, estamos listos para
                 ayudarte a convertir tus ideas en soluciones digitales personalizadas.</p>
 
-              <form id="contactForm" method="POST" action="https://script.google.com/macros/s/AKfycbzlkrzO2IQCq1YDS5zMmKtuKcER8amZWGQXrl0An1lINyjrSRlqK55EbE1wiRSOgETS/exec" data-aos="fade-up" data-aos-delay="200">
+              <form id="contactForm" data-aos="fade-up" data-aos-delay="200">
                 <input type="hidden" name="access_key" value="9cb2097f-fa12-4e7e-baa8-967caa0e1570">
                 <input type="text" name="_honeypot" class="hp-field" tabindex="-1" autocomplete="off">
                 <div class="row gy-4">
@@ -739,6 +739,7 @@
       formMessage.innerHTML = '';
 
       try {
+        // 1️⃣ Send to Web3Forms
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: formData
@@ -746,21 +747,36 @@
 
         const data = await response.json();
 
-        if (data.success) {
-          formMessage.innerHTML = '<div class="alert alert-success">¡Mensaje enviado exitosamente! Te contactaremos pronto.</div>';
-          form.reset();
-        } else {
+        if (!data.success) {
           throw new Error(data.message || 'Error al enviar el mensaje');
         }
+
+        // 2️⃣ Send to Google Apps Script
+        await fetch(
+          'https://script.google.com/macros/s/AKfycbzlkrzO2IQCq1YDS5zMmKtuKcER8amZWGQXrl0An1lINyjrSRlqK55EbE1wiRSOgETS/exec',
+          {
+            method: 'POST',
+            body: formData
+          }
+        );
+
+        // ✅ Success UI
+        formMessage.innerHTML =
+          '<div class="alert alert-success">¡Mensaje enviado exitosamente! Te contactaremos pronto.</div>';
+        form.reset();
+
       } catch (error) {
-        formMessage.innerHTML = '<div class="alert alert-danger">Hubo un error al enviar el mensaje. Por favor, intenta nuevamente o contáctanos directamente.</div>';
+        formMessage.innerHTML =
+          '<div class="alert alert-danger">Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.</div>';
         console.error('Error:', error);
+
       } finally {
-        // Re-enable button and hide loading
         submitBtn.disabled = false;
         btnText.textContent = 'Enviar mensaje';
         btnSpinner.style.display = 'none';
       }
+
+      // https://script.google.com/macros/s/AKfycbzlkrzO2IQCq1YDS5zMmKtuKcER8amZWGQXrl0An1lINyjrSRlqK55EbE1wiRSOgETS/exec
     });
   </script>
 </body>
