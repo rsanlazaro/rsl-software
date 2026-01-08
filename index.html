@@ -762,7 +762,7 @@
           throw new Error(data.message || 'Error al enviar el mensaje');
         }
 
-        await fetch(
+        const response2 = await fetch(
           'https://script.google.com/macros/s/AKfycbzlkrzO2IQCq1YDS5zMmKtuKcER8amZWGQXrl0An1lINyjrSRlqK55EbE1wiRSOgETS/exec',
           {
             method: 'POST',
@@ -770,12 +770,12 @@
           }
         );
 
-        console.log(JSON.stringify({
-          name: formName,
-          email: formEmail,
-          subject: formSubject,
-          message: formMessageContent
-        }));
+        const result2 = await response2.json();
+        console.log('Sheet response:', result2);
+
+        if (result2.result !== 'success') {
+          throw new Error(result2.message || 'Sheet error');
+        }
 
         formMessage.innerHTML =
           '<div class="alert alert-success">¡Mensaje enviado exitosamente! Te contactaremos pronto.</div>';
