@@ -5,73 +5,75 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>RSL Software - Desarrollo Web Personalizado</title>
-  <meta name="description" content="Desarrollo de software web personalizado, diseño de páginas web, aplicaciones web y correos empresariales en México.">
+  <meta name="description"
+    content="Desarrollo de software web personalizado, diseño de páginas web, aplicaciones web y correos empresariales en México.">
   <meta name="keywords" content="desarrollo web, diseño web, aplicaciones web, software personalizado, México">
-  
+
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="build/img/general/icon.jpg">
   <link href="build/img/general/icon.jpg" rel="apple-touch-icon">
-  
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
+
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link rel="stylesheet" href="build/css/app.css">
-  
+
   <style>
     /* Form improvements */
     .contact-form .form-control:focus {
       border-color: var(--accent-color, #007bff);
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
     }
-    
+
     .contact-form .btn:disabled {
       opacity: 0.6;
       cursor: not-allowed;
     }
-    
+
     .alert {
       margin-top: 1rem;
       padding: 1rem;
       border-radius: 0.5rem;
       animation: slideIn 0.3s ease-out;
     }
-    
+
     @keyframes slideIn {
       from {
         opacity: 0;
         transform: translateY(-10px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-    
+
     .alert-success {
       background-color: #d4edda;
       border: 1px solid #c3e6cb;
       color: #155724;
     }
-    
+
     .alert-danger {
       background-color: #f8d7da;
       border: 1px solid #f5c6cb;
       color: #721c24;
     }
-    
+
     .spinner {
       display: inline-block;
       width: 1rem;
@@ -81,11 +83,13 @@
       border-radius: 50%;
       animation: spin 0.6s linear infinite;
     }
-    
+
     @keyframes spin {
-      to { transform: rotate(360deg); }
+      to {
+        transform: rotate(360deg);
+      }
     }
-    
+
     /* Honeypot field - hidden from users but visible to bots */
     .hp-field {
       position: absolute;
@@ -99,7 +103,8 @@
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <div
+      class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <h1 class="sitename"><img src="build/img/general/logo.webp" alt="RSL Software Logo"></h1>
       </a>
@@ -108,10 +113,11 @@
         <ul>
           <li><a href="#hero" class="active">Inicio</a></li>
           <li><a href="#about">Nosotros</a></li>
-          <li><a href="#benefits">Beneficios</a></li>
           <li><a href="#services">Servicios</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contacto</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
         </ul>
       </nav>
     </div>
@@ -287,7 +293,8 @@
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-illustration-2.webp" alt="Ilustración de aplicaciones web" class="img-fluid">
+                <img src="assets/img/features-illustration-2.webp" alt="Ilustración de aplicaciones web"
+                  class="img-fluid">
               </div>
             </div>
           </div>
@@ -315,7 +322,8 @@
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-illustration-3.webp" alt="Ilustración de correos empresariales" class="img-fluid">
+                <img src="assets/img/features-illustration-3.webp" alt="Ilustración de correos empresariales"
+                  class="img-fluid">
               </div>
             </div>
           </div>
@@ -597,15 +605,8 @@
                 ayudarte a convertir tus ideas en soluciones digitales personalizadas.</p>
 
               <form id="contactForm" data-aos="fade-up" data-aos-delay="200">
-                <!-- Replace YOUR_ACCESS_KEY with your actual Web3Forms access key -->
                 <input type="hidden" name="access_key" value="9cb2097f-fa12-4e7e-baa8-967caa0e1570">
-                
-                <!-- Honeypot field to catch bots -->
                 <input type="text" name="_honeypot" class="hp-field" tabindex="-1" autocomplete="off">
-                
-                <!-- Redirect after submission (optional) -->
-                <input type="hidden" name="redirect" value="https://rslsoftware.com/gracias.html">
-                
                 <div class="row gy-4">
                   <div class="col-md-6">
                     <input type="text" name="name" class="form-control" placeholder="Nombre" required minlength="2">
@@ -620,7 +621,8 @@
                   </div>
 
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required minlength="10"></textarea>
+                    <textarea class="form-control" name="message" rows="6" placeholder="Mensaje" required
+                      minlength="10"></textarea>
                   </div>
 
                   <div class="col-12">
@@ -663,34 +665,37 @@
           <h4>Enlaces útiles</h4>
           <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="#about">Nosotros</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Nuestros servicios</h4>
           <ul>
-            <li><a href="#services">Diseño web</a></li>
-            <li><a href="#services">Desarrollo web</a></li>
-            <li><a href="#services">Correos empresariales</a></li>
-            <li><a href="#services">Asesoría técnica</a></li>
-            <li><a href="#services">Mantenimiento web</a></li>
+            <li><a href="index.html#services">Diseño web</a></li>
+            <li><a href="index.html#services">Desarrollo web</a></li>
+            <li><a href="index.html#services">Aplicaciones web</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Otros enlaces</h4>
+          <h4>Artículos del Blog</h4>
           <ul>
-            <li><a href="https://www.google.com/maps/place/Desarrollo+web+personalizado+RSL/data=!4m2!3m1!1s0x0:0x1841216d19d6cd63?sa=X&ved=1t:2428&hl=es-419&ictx=111" target="_blank" rel="noopener">Perfil de Google Maps</a></li>
+            <li><a href="blog-importancia-sitios-web.html">Importancia de Sitios Web</a></li>
+            <li><a href="blog-estatico-vs-dinamico.html">Estáticos vs Dinámicos</a></li>
+            <li><a href="blog-beneficios-impacto.html">Beneficios e Impacto</a></li>
           </ul>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Nuestro Blog</h4>
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Más Artículos</h4>
           <ul>
-            <li><span>En construcción</span></li>
+            <li><a href="blog-tendencias-pronosticos.html">Tendencias 2026</a></li>
+            <li><a href="blog-correos-seo.html">Correos y SEO</a></li>
+            <li><a href="blog-dashboards-gestion.html">Dashboards</a></li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -717,30 +722,30 @@
 
   <!-- Contact Form Script -->
   <script>
-    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
       e.preventDefault();
-      
+
       const form = e.target;
       const formData = new FormData(form);
       const submitBtn = document.getElementById('submitBtn');
       const btnText = document.getElementById('btnText');
       const btnSpinner = document.getElementById('btnSpinner');
       const formMessage = document.getElementById('formMessage');
-      
+
       // Disable button and show loading
       submitBtn.disabled = true;
       btnText.textContent = 'Enviando...';
       btnSpinner.style.display = 'inline-block';
       formMessage.innerHTML = '';
-      
+
       try {
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           body: formData
         });
-        
+
         const data = await response.json();
-        
+
         if (data.success) {
           formMessage.innerHTML = '<div class="alert alert-success">¡Mensaje enviado exitosamente! Te contactaremos pronto.</div>';
           form.reset();
